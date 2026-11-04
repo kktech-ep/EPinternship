@@ -10,6 +10,23 @@
   font-family: 'Sarabun', 'TH Sarabun New', sans-serif;
 }
 
+/* The supplied Khon Kaen Technical College seal already exists in public assets. */
+#memo-printable-page {
+  position: relative;
+}
+
+#memo-printable-page::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 10mm;
+  left: 40mm;
+  width: 18mm;
+  height: 18mm;
+  background: url('/assets/aistudio/LogoKKTech_f25116a9.jpg') center / contain no-repeat;
+  pointer-events: none;
+}
+
 @media print {
   @page {
     size: A4 portrait;
@@ -37,12 +54,14 @@
     background: white !important;
   }
 
-  body.memo-print-mode #memo-printable-page,
-  body.memo-print-mode #memo-printable-page * {
+  /* In the teaching-report view, native print must show the memo, not the A4
+     internship form. :has() avoids needing mutable print-mode state on body. */
+  body:has(#memo-printable-page) #memo-printable-page,
+  body:has(#memo-printable-page) #memo-printable-page * {
     visibility: visible;
   }
 
-  body.memo-print-mode #memo-printable-page {
+  body:has(#memo-printable-page) #memo-printable-page {
     position: absolute !important;
     left: 0 !important;
     top: 0 !important;
@@ -54,5 +73,6 @@
     background: white !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    break-after: avoid-page;
   }
 }
