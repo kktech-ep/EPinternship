@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-1 space-y-3">
             <h3 className="text-white text-sm font-semibold tracking-tight">แผนกวิชาช่างไฟฟ้ากำลัง</h3>
             <p className="text-slate-400 text-xs leading-relaxed">
-              วิทยาลัยเทคนิคขอนแก่น สถาบันการอาชีวศึกษาภาคตะวันออกเฉียงเหนือ 3 สำนักงานคณะกรรมการการอาชีวศึกษา (สอศ.)
+              อาคาร 8 ชั้น 3 วิทยาลัยเทคนิคขอนแก่น
             </p>
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 text-emerald-400 text-[11px] border border-slate-700">
               <Cloud className="w-3.5 h-3.5" />
@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-1 text-slate-300 text-xs">
               <p className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-slate-400" />
-                <span>โทร: 043-009700 ต่อ 214</span>
+                <span>โทร: 043-221290 ต่��� 8002</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-slate-400" />
